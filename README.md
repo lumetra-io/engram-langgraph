@@ -50,7 +50,7 @@ Namespaces map to Engram buckets as `<bucket_prefix>-<ns0>-<ns1>...`. Each item 
 
 ```python
 results = store.search(
-    ("user", "jacob"),
+    ("user", "alex"),
     query="What does this user prefer for UI themes?",
     limit=5,
 )
