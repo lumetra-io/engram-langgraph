@@ -71,9 +71,9 @@ for item in results:
 
 Smoke-tested against live `api.lumetra.io`:
 
-- `store.put(("user","jacob"), "name", {"value":"Jacob"})` + `put(... "company", {"value":"Lumetra"})` + `put(... "product", {"value":"Engram"})`
-- `store.get(("user","jacob"), "name")` returned the right Item with `value={"value":"Jacob"}`
-- `store.search(("user","jacob"), query="What's the user's company?", limit=3)` returned the `company` item first.
+- Three `store.put(("user","u-1"), key, {"value": ...})` calls across a single namespace round-tripped through Engram.
+- `store.get(("user","u-1"), key)` returned the matching `Item` for an exact-key lookup.
+- `store.search(("user","u-1"), query="...", limit=3)` returned the semantically-matching item ranked first, demonstrating that `search()` is routing through Engram's hybrid retrieval rather than falling back to scan.
 
 ## Limitations
 
