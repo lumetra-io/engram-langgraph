@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Local-only launch collateral (lives in ~/Documents/lumetra-marketing/)
+DISCORD_POST.md
+discord-launch-post.md
